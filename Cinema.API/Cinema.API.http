@@ -1,0 +1,57 @@
+@Cinema.API_HostAddress = https://localhost:7212/api/v1
+
+POST {{Cinema.API_HostAddress}}/venues
+Content-Type: application/json
+Accept: application/json
+
+{
+	"name":"Nova Unidade",
+	"address": {
+		"zipCode": "02998090",
+		"state": "SP",
+		"city": "São Paulo",
+		"street": "Rua 10 de Janeiro",
+		"number": "17",
+		"complement": null
+	}
+}
+
+###
+
+GET {{Cinema.API_HostAddress}}/venues/1
+Accept: application/json
+
+###
+
+GET {{Cinema.API_HostAddress}}/venues
+Accept: application/json
+
+###
+
+GET {{Cinema.API_HostAddress}}/venues?isactive=false
+Accept: application/json
+
+###
+
+PUT {{Cinema.API_HostAddress}}/venues/9
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Teste",
+  "address": {
+    "zipCode": "02998090",
+    "state": "SP",
+    "city": "São Paulo",
+    "street": "Rua 12 de Abril",
+    "number": "3000",
+    "complement": null
+  }
+}
+
+###
+
+DELETE {{Cinema.API_HostAddress}}/venues/8
+Accept: application/json
+
+###
