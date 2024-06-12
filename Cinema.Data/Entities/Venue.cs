@@ -47,6 +47,8 @@ public class Venue
     /// </summary>
     public string? Complement { get; set; }
 
+    public ICollection<VenueOperatingHour> OperatingHours { get; set; } = new List<VenueOperatingHour>();
+
     public Venue()
     {
         

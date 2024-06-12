@@ -15,6 +15,7 @@ public class WriteContext : DbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfiguration(new VenueConfiguration());
+        builder.ApplyConfiguration(new VenueOperatingHourConfiguration());
 
         base.OnModelCreating(builder);
     }
